@@ -127,6 +127,24 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #0056b3;
 }
+.machine-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 16px;
+  margin: 20px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  background-color: #fff;
+}
+
+.machine-card img.machine-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
 
 body.popup-open {
     overflow: hidden;
