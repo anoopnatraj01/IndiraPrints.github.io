@@ -1,113 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link rel="stylesheet" href="style.css" />
+
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indira Prints</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background-color: #f8f8f8;
-      color: #333;
-    }
-
-    header {
-      background-color: #1f1f1f;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 10px 0 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    section {
-      padding: 40px;
-      text-align: center;
-    }
-
-    .product {
-      display: inline-block;
-      width: 300px;
-      margin: 20px;
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    }
-
-    .product img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-    }
-
-    .product button {
-      margin-top: 10px;
-      padding: 10px 15px;
-      background-color: #1f1f1f;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-
-    .popup {
-      display: none;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5);
-      justify-content: center;
-      align-items: center;
-    }
-
-    .popup-content {
-      background: white;
-      padding: 30px;
-      border-radius: 10px;
-      width: 90%;
-      max-width: 500px;
-    }
-
-    .close {
-      float: right;
-      font-size: 20px;
-      cursor: pointer;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-
-    form input[type="submit"] {
-      background-color: #1f1f1f;
-      color: white;
-      border: none;
-      cursor: pointer;
-      margin-top: 15px;
-    }
-  </style>
 </head>
 <body>
   <header>
@@ -185,7 +84,7 @@
       alert(product + " added to inquiry list.");
     }
     function openForm() {
-      document.getElementById("popupForm").style.display = "flex";
+      document.getElementById("popupForm").style.display = "block";
     }
     function closeForm() {
       document.getElementById("popupForm").style.display = "none";
@@ -193,4 +92,3 @@
   </script>
 </body>
 </html>
-
