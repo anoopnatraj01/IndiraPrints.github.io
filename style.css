@@ -86,4 +86,36 @@ button:hover {
   top: 10px;
   cursor: pointer;
 }
+/* Responsive popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+}
+
+/* Make popup close button easier to tap on mobile */
+.popup-content .close {
+  font-size: 24px;
+  float: right;
+  cursor: pointer;
+}
+
+/* Mobile-friendly fields */
+.popup-content input,
+.popup-content textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
 
