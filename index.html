@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indira Prints</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -34,10 +34,10 @@
     </section>
   </main>
 
-  <div class="form-popup" id="popupForm">
+  <div id="popupForm" class="form-popup">
     <form class="form-container">
       <h2>Product Inquiry</h2>
-      <input type="text" id="productInput" placeholder="Product Name" readonly />
+      <input id="productInput" type="text" placeholder="Selected Product" readonly />
       <input type="text" placeholder="Your Name" required />
       <input type="email" placeholder="Your Email" required />
       <textarea placeholder="Your Message"></textarea>
@@ -53,10 +53,10 @@
   <script>
     function openForm(productName) {
       document.getElementById("productInput").value = productName;
-      document.getElementById("popupForm").style.display = "block";
+      document.getElementById("popupForm").style.display = 'block';
     }
     function closeForm() {
-      document.getElementById("popupForm").style.display = "none";
+      document.getElementById("popupForm").style.display = 'none';
     }
   </script>
 </body>
