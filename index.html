@@ -1,111 +1,63 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Indira Prints - Printing Machines</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indira Prints</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <h1>Indira Prints</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>Indira Prints</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">About Us</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-    <main>
-        <div class="machine-card">
-  <img src="images/machine1.jpg" alt="Machine 1" class="machine-image" />
-  <h3>Machine 1</h3>
-  <p>High-speed Flex Printing Machine – ideal for banners and signage.</p>
-  <button onclick="openPopup('Machine 1')">Inquire</button>
-</div>
+  <main>
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="images/machine1.jpg" alt="Machine 1">
+        <h3>Machine 1</h3>
+        <p>High-speed Flex Printing Machine – ideal for banners and signage.</p>
+        <button onclick="openForm('Machine 1')">Inquire</button>
+      </div>
+      <div class="product-card">
+        <img src="images/machine2.jpg" alt="Machine 2">
+        <h3>Machine 2</h3>
+        <p>Eco-solvent Printer – best for photo-quality vinyl and stickers.</p>
+        <button onclick="openForm('Machine 2')">Inquire</button>
+      </div>
+    </section>
+  </main>
 
-<div class="machine-card">
-  <img src="images/machine2.jpg" alt="Machine 2" class="machine-image" />
-  <h3>Machine 2</h3>
-  <p>Eco-solvent Printer – best for photo-quality vinyl and stickers.</p>
-  <button onclick="openPopup('Machine 2')">Inquire</button>
-</div>
-
-        <section class="products">
-            <div class="product">
-                <img src="https://via.placeholder.com/300x200" alt="Machine 1">
-                <h2>Machine Model A1</h2>
-                <button onclick="openForm('Machine Model A1')">Inquire</button>
-            </div>
-            <div class="product">
-                <img src="https://via.placeholder.com/300x200" alt="Machine 2">
-                <h2>Machine Model B2</h2>
-                <button onclick="openForm('Machine Model B2')">Inquire</button>
-            </div>
-        </section>
-    </main>
-
-    <div id="popupForm" class="popup">
-        <div class="popup-content">
-            <span onclick="closeForm()" class="close">&times;</span>
-            <h3>Inquiry Form</h3>
-            <form action="https://formspree.io/f/mnqekzbk" method="POST">
-                <input type="hidden" id="product" name="product" value="">
-                <label for="name">Name:</label>
-                <input type="text" name="name" required />
-                <label for="email">Email:</label>
-                <input type="email" name="email" required />
-                <label for="message">Message:</label>
-                <textarea name="message" rows="4" required></textarea>
-                <input type="submit" value="Send Inquiry" />
-            </form>
-        </div>
-    </div>
-
-    <footer>
-        <p>&copy; 2025 Indira Prints. All rights reserved.</p>
-    </footer>
-
-    <script>
-        function openForm(product) {
-            document.getElementById("popupForm").style.display = "block";
-            document.getElementById("product").value = product;
-            document.body.classList.add("popup-open");
-        }
-
-        function closeForm() {
-            document.getElementById("popupForm").style.display = "none";
-            document.body.classList.remove("popup-open");
-        }
-    </script>
-    <div class="product-grid">
-
-  <div class="product-card">
-    <img src="images/machine1.jpg" alt="Printing Machine 1">
-    <h3>Mini Offset Printer</h3>
-    <p>Compact, reliable for A4 & A3 formats.</p>
-    <button onclick="openPopup('Mini Offset Printer')">Inquire</button>
+  <div class="form-popup" id="popupForm">
+    <form class="form-container">
+      <h2>Product Inquiry</h2>
+      <input type="text" id="productInput" placeholder="Product Name" readonly />
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message"></textarea>
+      <button type="submit">Send Inquiry</button>
+      <button type="button" class="cancel" onclick="closeForm()">Close</button>
+    </form>
   </div>
 
-  <div class="product-card">
-    <img src="images/machine2.jpg" alt="Printing Machine 2">
-    <h3>Digital Flex Printer</h3>
-    <p>High-res printing with fast output.</p>
-    <button onclick="openPopup('Digital Flex Printer')">Inquire</button>
-  </div>
+  <footer>
+    <p>&copy; 2025 Indira Prints. All rights reserved.</p>
+  </footer>
 
-  <div class="product-card">
-    <img src="images/machine3.jpg" alt="Printing Machine 3">
-    <h3>UV Flatbed Printer</h3>
-    <p>Prints on wood, glass, metal with ease.</p>
-    <button onclick="openPopup('UV Flatbed Printer')">Inquire</button>
-  </div>
-
-</div>
-
+  <script>
+    function openForm(productName) {
+      document.getElementById("productInput").value = productName;
+      document.getElementById("popupForm").style.display = "block";
+    }
+    function closeForm() {
+      document.getElementById("popupForm").style.display = "none";
+    }
+  </script>
 </body>
 </html>
