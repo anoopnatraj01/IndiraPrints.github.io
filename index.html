@@ -1,49 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Indira Prints</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header><h1>Indira Prints</h1></header>
+  <header>
+    <h1>Indira Prints</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Welcome to Indira Prints</h2>
+    <p>Your trusted source for premium printing machines.</p>
+  </section>
 
   <section id="products">
-    <div class="products-grid">
-      <div class="product-card">
-        <a href="machine1.html"><img src="images/machine1.jpg" alt="Printer X100"></a>
-        <h3><a href="machine1.html"><strong>Printer X100</strong></a></h3>
-        <p><span class="original">₹10,000</span> <span class="discount">₹5,000</span></p>
-        <div class="btns">
-          <button onclick="addToCart('Printer X100')">Add to Cart</button>
-          <button onclick="buyNow('Printer X100')">Buy Now</button>
-        </div>
+    <h2>Our Products</h2>
+    <div class="product-list">
+      <div class="product">
+        <a href="machine1.html">
+          <img src="images/printer1.jpg" alt="Printer X100">
+          <h3>Printer X100</h3>
+          <p class="price"><span class="original">₹80,000</span> ₹65,000</p>
+        </a>
+        <button onclick="alert('Printer X100 added to cart')">Add to Cart</button>
       </div>
-      <div class="product-card">
-        <a href="machine2.html"><img src="images/machine2.jpg" alt="Printer Z200"></a>
-        <h3><a href="machine2.html"><strong>Printer Z200</strong></a></h3>
-        <p><span class="original">₹14,000</span> <span class="discount">₹7,500</span></p>
-        <div class="btns">
-          <button onclick="addToCart('Printer Z200')">Add to Cart</button>
-          <button onclick="buyNow('Printer Z200')">Buy Now</button>
-        </div>
+      <div class="product">
+        <a href="machine2.html">
+          <img src="images/printer2.jpg" alt="Printer Z200">
+          <h3>Printer Z200</h3>
+          <p class="price"><span class="original">₹65,000</span> ₹52,000</p>
+        </a>
+        <button onclick="alert('Printer Z200 added to cart')">Add to Cart</button>
       </div>
-      <div class="product-card">
-        <a href="machine3.html"><img src="images/machine3.jpg" alt="Printer A300"></a>
-        <h3><a href="machine3.html"><strong>Printer A300</strong></a></h3>
-        <p><span class="original">₹13,000</span> <span class="discount">₹8,000</span></p>
-        <div class="btns">
-          <button onclick="addToCart('Printer A300')">Add to Cart</button>
-          <button onclick="buyNow('Printer A300')">Buy Now</button>
-        </div>
+      <div class="product">
+        <a href="machine3.html">
+          <img src="images/printer3.jpg" alt="Printer L300">
+          <h3>Printer L300</h3>
+          <p class="price"><span class="original">₹90,000</span> ₹74,000</p>
+        </a>
+        <button onclick="alert('Printer L300 added to cart')">Add to Cart</button>
       </div>
     </div>
   </section>
 
-  <script>
-    function addToCart(p){ alert(p+" added to cart."); }
-    function buyNow(p){ alert("Proceed to buy "+p+"."); }
-  </script>
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
+      <button type="submit">Send Inquiry</button>
+    </form>
+  </section>
 </body>
 </html>
