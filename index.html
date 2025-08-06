@@ -1,105 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css" />
-
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Indira Prints</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indira Prints - Printing Machines</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    Indira Prints
+    <h1>🖨️ Indira Prints</h1>
+    <p>Your one-stop destination for affordable printing machines</p>
   </header>
 
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Machines</a>
-    <a href="#">Contact</a>
-  </nav>
-
-  <div class="container">
-    <h2>Our Printing Machines</h2>
-    <div class="products">
-
-      <!-- Machine 1 -->
-      <div class="product">
-        <img src="images/machine1.jpg" alt="Printer 1">
-        <h3>Canon Pixma G3020</h3>
-        <div class="price">₹19,999</div>
-        <div class="old-price">₹24,999</div>
-        <button>Inquire</button>
-      </div>
-
-      <!-- Machine 2 -->
-      <div class="product">
-        <img src="images/machine2.jpg" alt="Printer 2">
-        <h3>Epson EcoTank L3210</h3>
-        <div class="price">₹20,999</div>
-        <div class="old-price">₹26,000</div>
-        <button>Inquire</button>
-      </div>
-
-      <!-- Machine 3 -->
-      <div class="product">
-        <img src="images/machine3.jpg" alt="Printer 3">
-        <h3>Brother DCP-T525W</h3>
-        <div class="price">₹22,499</div>
-        <div class="old-price">₹27,999</div>
-        <button>Inquire</button>
-      </div>
-
-      <!-- Machine 4 -->
-      <div class="product">
-        <img src="images/machine4.jpg" alt="Printer 4">
-        <h3>HP Ink Tank 419</h3>
-        <div class="price">₹21,000</div>
-        <div class="old-price">₹25,000</div>
-        <button>Inquire</button>
-      </div>
-
-      <!-- Machine 5 -->
-      <div class="product">
-        <img src="images/machine5.jpg" alt="Printer 5">
-        <h3>Canon PIXMA G2020</h3>
-        <div class="price">₹23,000</div>
-        <div class="old-price">₹28,000</div>
-        <button>Inquire</button>
-      </div>
-
-      <!-- Machine 6 -->
-      <div class="product">
-        <img src="images/machine6.jpg" alt="Printer 6">
-        <h3>Epson L3250 WiFi</h3>
-        <div class="price">₹24,999</div>
-        <div class="old-price">₹30,000</div>
-        <button>Inquire</button>
-      </div>
-
-      <!-- Machine 7 -->
-      <div class="product">
-        <img src="images/machine7.jpg" alt="Printer 7">
-        <h3>Brother HL-L2321D</h3>
-        <div class="price">₹26,000</div>
-        <div class="old-price">₹32,000</div>
-        <button>Inquire</button>
-      </div>
-
-      <!-- Machine 8 -->
-      <div class="product">
-        <img src="images/machine8.jpg" alt="Printer 8">
-        <h3>HP Laser MFP 136a</h3>
-        <div class="price">₹27,500</div>
-        <div class="old-price">₹34,000</div>
-        <button>Inquire</button>
-      </div>
-
+  <main class="product-grid">
+    <!-- Machine 1 -->
+    <div class="product">
+      <img src="images/machine1.jpg" alt="Machine 1" />
+      <h2><strong>Machine 1: Compact Thermal Printer</strong></h2>
+      <p class="price"><span class="old-price">₹10,000</span> ₹5,000</p>
+      <button onclick="addToCart('Machine 1')">Add to Cart</button>
+      <button onclick="buyNow('Machine 1')">Buy Now</button>
     </div>
-  </div>
+
+    <!-- Machine 2 -->
+    <div class="product">
+      <img src="images/machine2.jpg" alt="Machine 2" />
+      <h2><strong>Machine 2: Heavy-Duty Inkjet Printer</strong></h2>
+      <p class="price"><span class="old-price">₹14,000</span> ₹7,500</p>
+      <button onclick="addToCart('Machine 2')">Add to Cart</button>
+      <button onclick="buyNow('Machine 2')">Buy Now</button>
+    </div>
+
+    <!-- Machine 3 -->
+    <div class="product">
+      <img src="images/machine3.jpg" alt="Machine 3" />
+      <h2><strong>Machine 3: Digital Screen Printer</strong></h2>
+      <p class="price"><span class="old-price">₹12,000</span> ₹8,000</p>
+      <button onclick="addToCart('Machine 3')">Add to Cart</button>
+      <button onclick="buyNow('Machine 3')">Buy Now</button>
+    </div>
+  </main>
 
   <footer>
-    © 2025 Indira Prints. All rights reserved.
+    <p>&copy; 2025 Indira Prints. All rights reserved.</p>
   </footer>
+
+  <script>
+    function addToCart(product) {
+      alert(product + ' has been added to your cart!');
+    }
+
+    function buyNow(product) {
+      alert('You are buying ' + product + '. Proceeding to checkout...');
+    }
+  </script>
 </body>
 </html>
