@@ -2,56 +2,61 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Indira Prints - Printing Machines</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>🖨️ Indira Prints</h1>
-    <p>Your one-stop destination for affordable printing machines</p>
+    <h1>Indira Prints</h1>
+    <p>Affordable Printing Machines</p>
   </header>
 
-  <main class="product-grid">
+  <section id="products">
     <!-- Machine 1 -->
     <div class="product">
       <img src="images/machine1.jpg" alt="Machine 1" />
-      <h2><strong>Machine 1: Compact Thermal Printer</strong></h2>
-      <p class="price"><span class="old-price">₹10,000</span> ₹5,000</p>
-      <button onclick="addToCart('Machine 1')">Add to Cart</button>
-      <button onclick="buyNow('Machine 1')">Buy Now</button>
+      <h3><strong>Thermal Printer X1</strong></h3>
+      <div class="price-block">
+        <span class="original-price">₹10,000</span><br />
+        <span class="discounted-price">₹5,000</span>
+      </div>
+      <button onclick="addToCart('Thermal Printer X1')">Add to Cart</button>
+      <button onclick="buyNow('Thermal Printer X1')">Buy Now</button>
     </div>
 
     <!-- Machine 2 -->
     <div class="product">
       <img src="images/machine2.jpg" alt="Machine 2" />
-      <h2><strong>Machine 2: Heavy-Duty Inkjet Printer</strong></h2>
-      <p class="price"><span class="old-price">₹14,000</span> ₹7,500</p>
-      <button onclick="addToCart('Machine 2')">Add to Cart</button>
-      <button onclick="buyNow('Machine 2')">Buy Now</button>
+      <h3><strong>Eco Print 200</strong></h3>
+      <div class="price-block">
+        <span class="original-price">₹12,000</span><br />
+        <span class="discounted-price">₹7,500</span>
+      </div>
+      <button onclick="addToCart('Eco Print 200')">Add to Cart</button>
+      <button onclick="buyNow('Eco Print 200')">Buy Now</button>
     </div>
 
     <!-- Machine 3 -->
     <div class="product">
       <img src="images/machine3.jpg" alt="Machine 3" />
-      <h2><strong>Machine 3: Digital Screen Printer</strong></h2>
-      <p class="price"><span class="old-price">₹12,000</span> ₹8,000</p>
-      <button onclick="addToCart('Machine 3')">Add to Cart</button>
-      <button onclick="buyNow('Machine 3')">Buy Now</button>
+      <h3><strong>LabelJet Pro</strong></h3>
+      <div class="price-block">
+        <span class="original-price">₹14,000</span><br />
+        <span class="discounted-price">₹8,000</span>
+      </div>
+      <button onclick="addToCart('LabelJet Pro')">Add to Cart</button>
+      <button onclick="buyNow('LabelJet Pro')">Buy Now</button>
     </div>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Indira Prints. All rights reserved.</p>
-  </footer>
+  </section>
 
   <script>
-    function addToCart(product) {
-      alert(product + ' has been added to your cart!');
+    function addToCart(productName) {
+      alert(productName + " added to cart!");
     }
 
-    function buyNow(product) {
-      alert('You are buying ' + product + '. Proceeding to checkout...');
+    function buyNow(productName) {
+      alert("Proceeding to buy " + productName + "...");
     }
   </script>
 </body>
