@@ -2,61 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Indira Prints - Printing Machines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indira Prints</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Indira Prints</h1>
-    <p>Affordable Printing Machines</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
+  <section id="home">
+    <h2>Welcome to Indira Prints</h2>
+    <p>Your trusted source for premium printing machines.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>We offer reliable and high-quality printing machines for your business needs.</p>
+  </section>
+
   <section id="products">
-    <!-- Machine 1 -->
+    <h2>Our Products</h2>
     <div class="product">
-      <img src="images/machine1.jpg" alt="Machine 1" />
-      <h3><strong>Thermal Printer X1</strong></h3>
-      <div class="price-block">
-        <span class="original-price">₹10,000</span><br />
-        <span class="discounted-price">₹5,000</span>
-      </div>
-      <button onclick="addToCart('Thermal Printer X1')">Add to Cart</button>
-      <button onclick="buyNow('Thermal Printer X1')">Buy Now</button>
+      <a href="machine1.html">
+        <img src="placeholder1.jpg" alt="Printer X100" />
+        <h3><b>Printer X100</b></h3>
+        <p class="price"><s>₹10,000</s> ₹5,000</p>
+      </a>
+      <button onclick="addToCart('Printer X100')">Add to Inquiry</button>
     </div>
-
-    <!-- Machine 2 -->
     <div class="product">
-      <img src="images/machine2.jpg" alt="Machine 2" />
-      <h3><strong>Eco Print 200</strong></h3>
-      <div class="price-block">
-        <span class="original-price">₹12,000</span><br />
-        <span class="discounted-price">₹7,500</span>
-      </div>
-      <button onclick="addToCart('Eco Print 200')">Add to Cart</button>
-      <button onclick="buyNow('Eco Print 200')">Buy Now</button>
+      <a href="machine2.html">
+        <img src="placeholder2.jpg" alt="Printer Z200" />
+        <h3><b>Printer Z200</b></h3>
+        <p class="price"><s>₹14,000</s> ₹7,500</p>
+      </a>
+      <button onclick="addToCart('Printer Z200')">Add to Inquiry</button>
     </div>
-
-    <!-- Machine 3 -->
     <div class="product">
-      <img src="images/machine3.jpg" alt="Machine 3" />
-      <h3><strong>LabelJet Pro</strong></h3>
-      <div class="price-block">
-        <span class="original-price">₹14,000</span><br />
-        <span class="discounted-price">₹8,000</span>
-      </div>
-      <button onclick="addToCart('LabelJet Pro')">Add to Cart</button>
-      <button onclick="buyNow('LabelJet Pro')">Buy Now</button>
+      <a href="machine3.html">
+        <img src="placeholder3.jpg" alt="Printer A300" />
+        <h3><b>Printer A300</b></h3>
+        <p class="price"><s>₹13,000</s> ₹8,000</p>
+      </a>
+      <button onclick="addToCart('Printer A300')">Add to Inquiry</button>
     </div>
   </section>
 
-  <script>
-    function addToCart(productName) {
-      alert(productName + " added to cart!");
-    }
+  <section id="blog">
+    <h2>Latest Blog Posts</h2>
+    <article>
+      <h3>Choosing the Right Printing Machine</h3>
+      <p>Learn how to pick the best printer for your business size and type.</p>
+    </article>
+  </section>
 
-    function buyNow(productName) {
-      alert("Proceeding to buy " + productName + "...");
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <button onclick="openForm()">Send Inquiry</button>
+  </section>
+
+  <div id="popupForm" class="popup">
+    <div class="popup-content">
+      <span onclick="closeForm()" class="close">&times;</span>
+      <h3>Inquiry Form</h3>
+      <form action="https://formspree.io/f/yourformid" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Email Address" required />
+        <textarea name="message" placeholder="Message" required></textarea>
+        <input type="submit" value="Send Inquiry" />
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const cart = [];
+    function addToCart(product) {
+      cart.push(product);
+      alert(product + " added to inquiry list.");
+    }
+    function openForm() {
+      document.getElementById("popupForm").style.display = "flex";
+    }
+    function closeForm() {
+      document.getElementById("popupForm").style.display = "none";
     }
   </script>
 </body>
