@@ -1,66 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Indira Prints</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Indira Prints - Printing Machines</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Indira Prints</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#products">Products</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+    <h1>Welcome to Indira Prints</h1>
+    <p>WE PROVIDE PRINTING MACHINES</p>
   </header>
-
-  <section id="home">
-    <h2>Welcome to Indira Prints</h2>
-    <p>Your trusted source for premium printing machines.</p>
-  </section>
-
-  <section id="products">
-    <h2>Our Products</h2>
-    <div class="product-list">
-      <div class="product">
-        <a href="machine1.html">
-          <img src="images/printer1.jpg" alt="Printer X100">
-          <h3>Printer X100</h3>
-          <p class="price"><span class="original">₹80,000</span> ₹65,000</p>
-        </a>
-        <button onclick="alert('Printer X100 added to cart')">Add to Cart</button>
+  <main>
+    <section class="machine-list">
+      <!-- Machine 3 -->
+      <div class="machine-card">
+        <img src="images/printer3.jpg" alt="Epson EcoTank L3250">
+        <h2>Epson EcoTank L3250</h2>
+        <div class="price-section">
+          <span class="discounted">₹69,999</span>
+          <span class="original">₹90,000</span>
+        </div>
+        <p>
+          Next-generation wireless all-in-one printer with ultra-low-cost printing, high-capacity ink tanks, fast print speeds, Wi-Fi connectivity, and 1-year onsite warranty. Perfect for businesses, designers, schools, and home offices.
+        </p>
+        <a href="machine3.html" class="details-button">View Details</a>
       </div>
-      <div class="product">
-        <a href="machine2.html">
-          <img src="images/printer2.jpg" alt="Printer Z200">
-          <h3>Printer Z200</h3>
-          <p class="price"><span class="original">₹65,000</span> ₹52,000</p>
-        </a>
-        <button onclick="alert('Printer Z200 added to cart')">Add to Cart</button>
-      </div>
-      <div class="product">
-        <a href="machine3.html">
-          <img src="images/printer3.jpg" alt="Printer L300">
-          <h3>Printer L300</h3>
-          <p class="price"><span class="original">₹90,000</span> ₹74,000</p>
-        </a>
-        <button onclick="alert('Printer L300 added to cart')">Add to Cart</button>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <form action="https://formspree.io/f/yourformid" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
-      <button type="submit">Send Inquiry</button>
-    </form>
-  </section>
+      <!-- If you have other machines, keep their cards here as before -->
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Indira Prints. All rights reserved.</p>
+  </footer>
 </body>
 </html>
