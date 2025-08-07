@@ -1,61 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine 1 - Indira Prints</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specific image container fix */
+    .product-card img {
+      max-height: 220px;
+      object-fit: cover;
+      width: 100%;
+      border-radius: 8px;
+    }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-}
-header {
-  background-color: #222;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-.product-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
-}
-.product-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  margin: 1rem;
-  padding: 1rem;
-  width: 300px;
-  text-align: center;
-}
-.product-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 4px;
-}
-.original-price {
-  text-decoration: line-through;
-  color: #999;
-}
-.discounted-price {
-  font-size: 1.2rem;
-  color: #e53935;
-  margin: 0.5rem 0;
-}
-button {
-  margin: 0.3rem;
-  padding: 0.5rem 1rem;
-  background-color: #28a745;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover {
-  background-color: #218838;
-}
-@media (max-width: 768px) {
-  .product-grid {
-    flex-direction: column;
-    align-items: center;
-  }
-}
+    .product-description {
+      color: #333;
+      font-size: 0.95rem;
+      margin: 0.8rem 0;
+      line-height: 1.6;
+    }
+
+    .icons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin: 1rem 0;
+    }
+
+    .icon {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .icon img {
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Machine 1 - Premium Quality</h1>
+  </header>
+
+  <main class="product-grid">
+    <div class="product-card">
+      <img src="images/machine1.jpg" alt="Machine 1 Image">
+
+      <h2><strong>High-Speed Fabric Printer</strong></h2>
+
+      <p class="original-price">₹18,000</p>
+      <p class="discounted-price">₹9,000</p>
+
+      <div class="product-description">
+        This high-speed fabric printer is ideal for bulk and commercial printing operations. It supports multi-color textile outputs, seamless speed control, low energy consumption, and comes with a 1-year standard warranty. Ideal for synthetic and cotton blends.
+      </div>
+
+      <div class="icons">
+        <div class="icon"><img src="images/refund.png" alt="14-day refund"> 14-Day Refund</div>
+        <div class="icon"><img src="images/hallmark.png" alt="Quality Certified"> Hallmarked Quality</div>
+      </div>
+
+      <button onclick="alert('Added to Inquiry')">Add to Inquiry</button>
+    </div>
+  </main>
+</body>
+</html>
