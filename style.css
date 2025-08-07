@@ -1,164 +1,71 @@
+/* style.css */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  background: #f7f7f7;
-  color: #222;
   margin: 0;
-  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
 header {
-  background: #27384c;
+  background-color: #222;
   color: #fff;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 20px;
   text-align: center;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
-  box-shadow: 0 2px 10px rgba(39,56,76,0.08);
 }
 
-header h1 {
-  margin: 0;
-  font-size: 2.5rem;
-}
-
-header p {
-  margin: 0.5rem 0 0 0;
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-}
-
-.machine-list {
+.product-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 2rem;
-  margin: 2rem auto;
-  max-width: 1200px;
+  padding: 20px;
+  gap: 20px;
 }
 
-.machine-card {
-  background: #fff;
-  border-radius: 15px;
-  box-shadow: 0 0 12px rgba(39,56,76,0.09);
-  width: 330px;
-  padding: 1.2rem 1rem 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: box-shadow 0.2s;
-}
-
-.machine-card:hover {
-  box-shadow: 0 6px 24px rgba(39,56,76,0.14);
-}
-
-.machine-card img {
-  width: 88%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-.machine-card h2 {
-  font-size: 1.3rem;
-  margin: 0.5rem 0 0.4rem 0;
-  color: #27384c;
-}
-
-.price-section {
-  margin-bottom: 0.6rem;
-}
-
-.discounted {
-  color: #1fa36b;
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-right: 0.7rem;
-}
-
-.original {
-  text-decoration: line-through;
-  color: #b3b3b3;
-  font-size: 1rem;
-}
-
-.machine-card p {
-  font-size: 1rem;
-  text-align: center;
-  margin: 0.5rem 0 1.2rem 0;
-}
-
-.details-button {
-  display: inline-block;
-  background: #1fa36b;
-  color: #fff;
-  text-decoration: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 7px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  transition: background 0.2s;
-}
-
-.details-button:hover {
-  background: #156346;
-}
-
-footer {
-  background: #27384c;
-  color: #fff;
-  text-align: center;
-  padding: 1.2rem 0;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  margin-top: 3rem;
-  font-size: 1rem;
-}
-
-section {
-  background: #fff;
-  border-radius: 15px;
-  margin: 2.5rem auto 2rem auto;
-  max-width: 650px;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
-  box-shadow: 0 0 20px rgba(39,56,76,0.09);
-}
-
-section img {
-  margin-bottom: 1.2rem;
-}
-
-section h2 {
-  font-size: 1.6rem;
-  color: #1fa36b;
-  margin-bottom: 1rem;
-}
-
-section ul {
-  list-style: disc inside;
-  margin: 1.2rem 0 1.2rem 0.5rem;
-  padding: 0;
-  color: #222;
-}
-
-section ul li {
-  margin-bottom: 0.5rem;
-  font-size: 1.01rem;
-}
-
-section button {
-  background: #1fa36b;
-  color: #fff;
-  border: none;
-  padding: 0.7rem 1.7rem;
-  font-size: 1.1rem;
+.product {
+  background: white;
+  width: 300px;
+  padding: 15px;
   border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 12px rgba(31,163,107,0.09);
-  transition: background 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-section button:hover {
-  background: #156346;
+.product img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.price {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+button {
+  margin: 5px;
+  padding: 10px 15px;
+  border: none;
+  background-color: #222;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+@media (max-width: 768px) {
+  .product-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%;
+  }
 }
